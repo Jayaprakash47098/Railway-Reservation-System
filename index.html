@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Railway Reservation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Railway Reservation System</h1>
+    <p>DSA Mini Project: Queue (FIFO) implemented in C</p>
+  </header>
+
+  <main>
+    <!-- Message box: shows result of every button click -->
+    <div id="message" class="message info">Welcome! Book a ticket to get started.</div>
+
+    <section class="card">
+      <h2>Book Ticket</h2>
+      <input type="text" id="name" placeholder="Passenger name" maxlength="20">
+      <button onclick="bookTicket()">Book Ticket</button>
+    </section>
+
+    <section class="card">
+      <h2>Cancel Ticket</h2>
+      <input type="number" id="cancelId" placeholder="Ticket ID" min="1">
+      <button class="red" onclick="cancelTicket()">Cancel Ticket</button>
+    </section>
+
+    <section class="card">
+      <h2>Seats <span id="seatCount"></span></h2>
+      <div id="seatBox" class="seat-grid"></div>
+      <button class="small" onclick="showSeats()">Show Available Seats</button>
+    </section>
+
+    <section class="card">
+      <h2>Waiting Queue <span id="queueCount"></span></h2>
+      <p class="hint">FRONT gets the next free seat. New passengers join at the REAR.</p>
+      <div id="queueBox" class="queue-row"></div>
+      <button class="small" onclick="showQueue()">Show Waiting Queue</button>
+    </section>
+
+    <button class="grey" onclick="resetAll()">Reset System</button>
+  </main>
+
+  <footer>Made by: Your Name | Guided by: Mam's Name</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
